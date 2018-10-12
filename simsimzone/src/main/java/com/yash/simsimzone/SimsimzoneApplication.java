@@ -8,5 +8,5 @@ public class SimsimzoneApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SimsimzoneApplication.class, args);
-	}
+	}	
 }

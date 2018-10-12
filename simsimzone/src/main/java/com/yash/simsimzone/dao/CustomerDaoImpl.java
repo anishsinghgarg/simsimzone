@@ -122,7 +122,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			con = jdbcConnection.getConnection();
 			stmt = con.createStatement();
 
-			String sql = "select * FROM customer_master";
+			String sql = "select * FROM customer_master order by createdDate desc";
 			rs = stmt.executeQuery(sql);
 			while (rs.next()) {
 				CustomerModel customer = new CustomerModel(rs.getInt("customerId"), rs.getString("customerName"),
