@@ -170,12 +170,10 @@ public class CustomerDaoImpl implements CustomerDao {
 					+ "',customerEmail='" + customerModel.getCustomerEmail() + "',customerName='"
 					+ customerModel.getCustomerName() + "',isActive='" + customerModel.getIsActive()
 					+ "' where customerId=" + customer.getCustomerId();
-
+			System.out.println("sql ::" + sql);
 			int result = st.executeUpdate(sql);
 			System.out.println("Update ::" + result);
 
-		} catch (SQLException se) {
-			se.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -191,9 +189,7 @@ public class CustomerDaoImpl implements CustomerDao {
 				se.printStackTrace();
 			}
 		}
-		
-		
-		createCustomer(customer);
+	
 		return customer;
 	}
 
